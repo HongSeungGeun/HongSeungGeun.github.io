@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+figure {
+    width: fit-content;
+    height: fit-content;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 999;
+}
+
+#header #nav {
+    width: 50%;
+    height: 100%;
+    color: white;
+    margin: auto;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
+}
+
+
+#main {
+    width: 100%;
+    height: 1080px;
+    color: white;
+}
+
+#main .main-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url(../imgs/pexels-daniel-cettler-14397098.jpg);
+}
+
+#main h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+
+
+/* 배경 */
+.backSky {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #111, #0e0f19);
+    overflow: hidden;
+}
+
+/* 별을 감싼 부모 */
+.sky {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveStar 240s linear infinite;
+}
+
+/* 별 */
+.sky .star {
+    fill: #fff;
+    stroke: black;
+    stroke-width: 1;
+}
+
+/* 별 이동효과 */
+@keyframes moveStar {
+    from {
+        transform: translate(-50%, -50%) rotate(0)
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
+}
+
+
+
+
+
+#section01 {
+    width: 100%;
+    height: 1080px;
+    background-color: #181818;
+    text-align: center;
+}
+
+#section01 h2 {
+    font-size: 2.5rem;
+    color: #00C0AE;
+    padding-top: 100px;
+}
+
+#section01 p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 22px;
+    padding-top: 50px;
+}
+
+#section02 {
+    width: 100%;
+    height: 1080px;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.moon {
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    opacity: 0;
+    transition: all 3s;
+}
+
+.circle {
+    width: 410px;
+    height: 410px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    background: rgb(182, 182, 182);
+    transform: translate3d(0, 0, 0);
+}
+
+.wave-one {
+    width: 620px;
+    height: 620px;
+    position: absolute;
+    top: -65%;
+    left: -30%;
+    border-radius: 45%;
+    background: rgb(58, 58, 58);
+    animation: move 5s infinite linear;
+}
+
+.wave-two {
+    width: 680px;
+    height: 680px;
+    position: absolute;
+    top: -90%;
+    left: -30%;
+    border-radius: 45%;
+    background: rgba(104, 104, 104, 0.8);
+    animation: move 7s infinite linear;
+}
+
+.wave-three {
+    width: 690px;
+    height: 690px;
+    position: absolute;
+    top: -100%;
+    left: -30%;
+    border-radius: 45%;
+    background: #000000;
+    animation: move 10s infinite linear;
+}
+
+
+@keyframes move {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* moon css & animation */
+.fa-moon {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: moon-rotation 6s infinite linear;
+}
+
+.blur {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+@keyframes moon-rotation {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+}
+
+
+/* star css & animation */
+
+.fa-asterisk {
+    position: absolute;
+    font-size: 13px;
+}
+
+.star1 {
+    top: 70px;
+    left: 90px;
+    animation: star-one 2s infinite;
+}
+        
+.star2 {
+    top: 50px;
+    right: 110px;
+    animation: star-two 3.1s infinite;
+}
+        
+.star3 {
+    top: 180px;
+    left: 45px;
+    animation: star-three 4.5s infinite;
+}
+        
+.star4 {
+    top: 120px;
+    right: 40px;
+    font-size: 5px;
+    animation: star-five 5.1s infinite;
+}
+
+.star5 {
+    top: 200px;
+    right: 90px;
+    font-size: 5px;
+    animation: star-five 6s infinite;
+}
+
+@keyframes star-one {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes star-two {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes star-three {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes star-four {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes star-five {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+#section02 .skill-box {
+    width: 1000px;
+    height: 450px;
+    background-color: #181818;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all 3s;
+}
+
+#section02 .skill-box h3 {
+    font-size: 2rem;
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+#section02 .skill-box .skill-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+}
+
+#section02 .skill-box .skill-img figure {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 70px;
+}
+
+#section02 .skill-box .skill-img figure img{
+    width: 100%;
+    height: 100%;
+}
+
+#section03 {
+    width: 100%;
+    height: 3000px;
+}
+
+#section03 .opacity {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 1;
+}
+
+#section04 {
+    width: 100%;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+#section04 h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 800px;
+}
+
+#section04 .project {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 800px;
+}
+
+#section04 .project .margin-right {
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 1.5s;
+}
+
+#section04 .project .margin-right figure{
+    width: 650px;
+    height: 320px;
+}
+
+#section04 .project .margin-right figure img{
+    width: 100%;
+    height: 100%;
+}
+
+#section04 .project .margin-left {
+    opacity: 0;
+    transform: translate(120%);
+    transition: all 1.5s;
+}
+
+
+#section04 .project h3 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+#section04 .project .button {
+    width: 110px;
+    margin-top: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#section05 {
+    width: 100%;
+    height: 600px;
+    background-color: #7e7e7e;
+    text-align: center;
+}
+
+#section05 h2 {
+    font-size: 2.5rem;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#section05 .floor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#section05 .floor:nth-of-type(1) {
+    padding-bottom: 100px;
+}
+
+#section05 .about-title {
+    width: 33.3%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section05 .about-title i {
+    padding-right: 30px;
+}
+
+#section05 .about-title p {
+    text-align: left;
+    line-height: 25px;
+}
+
+#section05 .about-title p strong {
+    font-size: 1.2rem;
+}
+
+#footer {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+}
+
+#footer h2 {
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
