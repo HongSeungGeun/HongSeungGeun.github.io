@@ -130,6 +130,7 @@ let observer01 = new IntersectionObserver((e)=>{
 let five = document.querySelectorAll('div')
 observer01.observe(five[13])
 observer01.observe(five[16])
+observer01.observe(five[19])
 
 
 // 스크롤시 프로젝트 좌 -> 우 등장
@@ -154,6 +155,7 @@ let observer02 = new IntersectionObserver((e)=>{
 let five01 = document.querySelectorAll('div')
 observer02.observe(five01[14])
 observer02.observe(five01[17])
+observer02.observe(five01[20])
 
 // 스크롤시 프로젝트 우 -> 좌 등장
 
