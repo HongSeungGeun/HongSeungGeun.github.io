@@ -428,6 +428,10 @@ figure {
     transition: all 1.5s;
 }
 
+#section04 .project .margin-left span {
+    background-color: darkgray;
+}
+
 
 #section04 .project h3 {
     font-size: 2rem;
@@ -435,9 +439,9 @@ figure {
 }
 
 #section04 .project .button {
-    width: 110px;
+    width: 120px;
     margin-top: 50px;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid black;
     border-radius: 25px;
     cursor: pointer;
